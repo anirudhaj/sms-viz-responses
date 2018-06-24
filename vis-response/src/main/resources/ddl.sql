@@ -1,0 +1,25 @@
+
+CREATE TABLE VZResponse (
+ID LONG auto_increment PRIMARY KEY, 
+mobileNum VARCHAR(25),
+mobileNumWO91 VARCHAR(25),
+ip VARCHAR(25),
+deviceType VARCHAR(255),
+os VARCHAR(255),
+platformVersion VARCHAR(255),
+browser_name VARCHAR(255),
+browser_version VARCHAR(255),
+engine_version VARCHAR(255),
+engine_name VARCHAR(255),
+country VARCHAR(255),
+region VARCHAR(255),
+city VARCHAR(255),
+latitude VARCHAR(15),
+longitude VARCHAR(15),
+device_make VARCHAR(255),
+clicked_date VARCHAR(15),
+clicked_time VARCHAR(15),
+campaign_name VARCHAR(255),
+campaign_type VARCHAR(255),
+rd_url  VARCHAR(1024)
+);
