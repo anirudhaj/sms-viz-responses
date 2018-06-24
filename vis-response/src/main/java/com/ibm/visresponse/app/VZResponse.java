@@ -28,6 +28,7 @@ import lombok.Setter;
 
 @Data
 public class VZResponse {
+	@Getter @Setter private String id;
 	@Getter @Setter private String mobileNum;
 	@Getter @Setter private String mobileNumWO91;
 	@Getter @Setter private String ip;
@@ -39,6 +40,7 @@ public class VZResponse {
 	@Getter @Setter private String engineVersion;
 	@Getter @Setter private String engineName;
 	@Getter @Setter private String country;
+	@Getter @Setter private String region;
 	@Getter @Setter private String city;
 	@Getter @Setter private String latitude;
 	@Getter @Setter private String longitude;
@@ -47,5 +49,5 @@ public class VZResponse {
 	@Getter @Setter private String clickTime;
 	@Getter @Setter private String campaignName;
 	@Getter @Setter private String campaignType;
-	@Getter @Setter private String mid;
+	@Getter @Setter private String redirectionURL;
 }

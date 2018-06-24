@@ -1,27 +1,28 @@
 package com.ibm.visresponse.app;
 
-import java.util.HashMap;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class VZResponseServiceMapImpl implements VZResponseService {
-	
-	final Logger logger = LoggerFactory.getLogger(VZResponseServiceMapImpl.class); 
-	
-	private HashMap<Integer, VZResponse> vzResponseMap;
-	private int count = 1;
+import com.ibm.visresponse.app.dao.VZResponseJDBCTemplate;
 
-	public VZResponseServiceMapImpl() {
-		vzResponseMap = new HashMap<>();
-	}
+public class VZResponseServiceDBImpl implements VZResponseService {
 	
+	final Logger log = LoggerFactory.getLogger(VZResponseServiceDBImpl.class); 
+	
+	
+	@SuppressWarnings("resource")
 	@Override
 	public void addVZResponse(VZResponse vz) {
-		vzResponseMap.put(count, vz);
-		count++;
-		logger.debug(vz.toString());
-		logger.debug(Integer.toString(vzResponseMap.size()));
+		//log.debug("Received response for mobile number " + vz.getMobileNum());
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");		
+		VZResponseJDBCTemplate vzJDBCTemplate = (VZResponseJDBCTemplate)context.getBean("VZResponseJDBCTemplate");
+		vzJDBCTemplate.create(vz);
+		log.debug("Response created");
+		
 	}
 	
 	
