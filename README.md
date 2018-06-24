@@ -19,3 +19,4 @@ You will have to host a http server such that it is accessible over the internet
 1. You should use it at your own risk.
 
 I have used Postman to test this application refer to the Postman screenshots if you want to try.
+![](TestPostman.png?raw=true)
