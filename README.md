@@ -14,7 +14,7 @@ You will have to host a http server such that it is accessible over the internet
 
 **Please note the following disclaimer**
 1. Currently there is no security implemented for this app. You may want to put restriction such that you accept request from specified IPs only. 
-1. There are no warranties or guarantees, implied or explicit or otherwise for this code. This is my personal repository and my employeer or me personally are not liable in any way.
+1. There are no warranties or guarantees, implied or explicit or otherwise for this code. This is my personal repository and my employeer or me personally are not liable for any damages / adverse impacts caused by using this code.
 1. There are open source project used in this code. You should refer licence terms of theose project if necessary.
 1. You should use it at your own risk.
 
